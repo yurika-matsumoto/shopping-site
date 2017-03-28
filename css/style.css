@@ -4,7 +4,8 @@ html {
 
 body {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
-  background: #f9f8f6; }
+  background: #f9f8f6;
+  font-size: 13px; }
 
 header #herder_in {
   padding-top: 10px;
@@ -26,7 +27,9 @@ header .sp_navi {
   text-align: center; }
 header #sp_navi_btn {
   padding: 5px; }
-header #sp_btn {
+header #sp_btn_fb {
+  padding: 5px; }
+header #sp_btn_ig {
   padding: 5px; }
 header .sp_navi_li {
   margin: 0;
@@ -132,52 +135,68 @@ header .sp_navi_li {
     #contents #main .shopping_guide .kessai {
       margin-left: 2px; } }
 #contents #main .pankuzu {
-  background: #e2ddd4;
+  background: #e8e4da;
   font-size: 12px;
   padding: 8px;
-  color: #887f69; }
+  color: #887f69;
+  border-radius: 4px; }
 #contents #main .item {
-  background: white; }
+  background: white;
+  margin-top: 10px; }
   #contents #main .item .item_title {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e2ddd4;
-    margin-bottom: 10px; }
+    padding-bottom: 20px;
+    padding-top: 20px; }
+    #contents #main .item .item_title .title {
+      font-size: 14px;
+      letter-spacing: 2px;
+      padding-bottom: 15px;
+      float: left; }
+      @media (max-width: 550px) {
+        #contents #main .item .item_title .title {
+          float: none;
+          padding-bottom: 0; } }
     #contents #main .item .item_title .fa {
-      color: #b0b0b0; }
-    @media (min-width: 550px) {
-      #contents #main .item .item_title .fa {
-        text-align: right; } }
-  #contents #main .item .list p {
-    margin: 0; }
-  @media (max-width: 550px) {
+      font-size: 10px;
+      color: #b0b0b0;
+      float: right; }
+      @media (max-width: 550px) {
+        #contents #main .item .item_title .fa {
+          font-size: 12px;
+          float: none; } }
+  #contents #main .item .list {
+    clear: both;
+    padding-top: 10px;
+    border-top: 1px solid #e2ddd4; }
     #contents #main .item .list p {
-      display: none; } }
-  #contents #main .item .list #display_img img {
-    width: 100%; }
-    @media (min-width: 550px) {
-      #contents #main .item .list #display_img img {
-        width: 73%;
-        float: left; } }
-  #contents #main .item .list #list_img {
-    margin: 0; }
-    @media (min-width: 550px) {
-      #contents #main .item .list #list_img {
-        width: 26%;
-        float: left;
-        padding-left: 1%; } }
-  #contents #main .item .list li {
-    list-style: none;
-    display: inline-block;
-    width: 18%;
-    padding: 1%;
-    margin-bottom: 0; }
-    @media (min-width: 550px) {
-      #contents #main .item .list li {
-        width: 48%; } }
-  #contents #main .item .list li img {
-    width: 100%;
-    cursor: pointer; }
+      margin: 0; }
+    @media (max-width: 550px) {
+      #contents #main .item .list p {
+        display: none; } }
+    #contents #main .item .list #display_img img {
+      width: 100%; }
+      @media (min-width: 550px) {
+        #contents #main .item .list #display_img img {
+          width: 73%;
+          float: left; } }
+    #contents #main .item .list #list_img {
+      margin: 0; }
+      @media (min-width: 550px) {
+        #contents #main .item .list #list_img {
+          width: 26%;
+          float: left;
+          padding-left: 1%; } }
+    #contents #main .item .list li {
+      list-style: none;
+      display: inline-block;
+      width: 18%;
+      padding: 1%;
+      margin-bottom: 0; }
+      @media (min-width: 550px) {
+        #contents #main .item .list li {
+          width: 48%; } }
+    #contents #main .item .list li img {
+      width: 100%;
+      cursor: pointer; }
   #contents #main .item .color_size {
     padding-top: 8px;
     border-top: solid 1px #e2ddd4; }
@@ -196,9 +215,11 @@ header .sp_navi_li {
     #contents #main .item .price_quantity .price {
       padding-top: 8px;
       padding-bottom: 8px;
-      border-top: 1px solid #e2ddd4; }
+      border-top: 1px solid #e2ddd4;
+      font-style: italic; }
       #contents #main .item .price_quantity .price img {
-        padding-right: 35px; }
+        padding-right: 35px;
+        padding-top: 8px; }
     #contents #main .item .price_quantity .quantity {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -258,16 +279,24 @@ header .sp_navi_li {
     padding: 10px 15px; }
 #contents #main .cover_sp {
   width: 100%;
-  padding-top: 5px; }
+  padding-top: 10px; }
   @media (min-width: 550px) {
     #contents #main .cover_sp {
       display: none; } }
 #contents #main .cover_pc {
   width: 100%;
-  padding-top: 5px; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
   @media (max-width: 550px) {
     #contents #main .cover_pc {
       display: none; } }
+#contents #main .page {
+  clear: both; }
+  #contents #main .page .back, #contents #main .page .next {
+    background: #887f69;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    margin: 15px 0 15px 0; }
 #contents #sidebar .pc_sidemenu .search {
   background: #fff;
   padding: 5px 15px; }
@@ -275,14 +304,14 @@ header .sp_navi_li {
     margin: 0; }
   #contents #sidebar .pc_sidemenu .search form {
     background-color: #ecebe8;
-    height: 24px;
+    height: 30px;
     font-size: 12px;
     color: #615c57;
     line-height: 23px; }
   #contents #sidebar .pc_sidemenu .search input {
     float: left;
     width: 65%;
-    height: 24px;
+    height: 30px;
     box-sizing: border-box;
     padding: 2px 5px;
     margin: 0;

@@ -18,6 +18,7 @@ $red1 : #9d1a2d;
 body {
   font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
   background: #f9f8f6;
+  font-size: 13px;
 }
 
 header {
@@ -58,7 +59,11 @@ header {
     padding: 5px;
   }
   
-  #sp_btn {
+  #sp_btn_fb {
+    padding: 5px;
+  }
+  
+  #sp_btn_ig {
     padding: 5px;
   }
   
@@ -235,34 +240,52 @@ header {
     }
     
     .pankuzu {
-      background: #e2ddd4;
+      background: #e8e4da;
       font-size: 12px;
       padding: 8px;
       color: #887f69;
+      border-radius: 4px;
     }
     
     .item {
       
       background: white;
+      margin-top: 10px;
     
       .item_title {
-        padding-top: 20px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #e2ddd4;
-        margin-bottom: 10px;
         
-        .fa {
-          color: #b0b0b0
+        padding-bottom: 20px;
+        padding-top: 20px;
+      
+        .title {
+          font-size: 14px;
+          letter-spacing: 2px;
+          padding-bottom:15px;
+          float: left;
+        
+          @media (max-width:550px) {
+            float: none;
+            padding-bottom: 0;
+          }
         }
         
-        @media (min-width: 550px) {
-          .fa {
-            text-align: right;
+        .fa {
+          font-size: 10px;
+          color: #b0b0b0;
+          float: right;
+          
+          @media (max-width:550px) {
+            font-size: 12px;
+            float: none;
           }
         }
       }
       
       .list {
+        
+        clear:both;
+        padding-top: 10px;
+        border-top: 1px solid #e2ddd4;
         
         p {
           margin: 0;
@@ -340,9 +363,11 @@ header {
         padding-top: 8px;
         padding-bottom: 8px;
         border-top: 1px solid #e2ddd4;
+        font-style: italic;
                 
         img {
           padding-right: 35px;
+          padding-top: 8px;
         }
       }
       
@@ -437,7 +462,7 @@ header {
     
     .cover_sp {
       width: 100%;
-      padding-top: 5px;
+      padding-top: 10px;
       
       @media (min-width: 550px) {
         display: none;
@@ -446,10 +471,24 @@ header {
     
     .cover_pc {
       width: 100%;
-      padding-top: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       
       @media (max-width: 550px) {
         display: none;
+      }
+    }
+    
+    .page {
+      
+      clear:both;
+      
+      .back,.next {
+      background: #887f69;
+      color: white;
+      padding: 10px 40px 10px 40px;
+      margin: 15px 0 15px 0;
+      
       }
     }
     
@@ -467,7 +506,7 @@ header {
       
       form {
         background-color: #ecebe8;
-        height: 24px;
+        height: 30px;
         font-size: 12px;
         color: #615c57;
         line-height: 23px;
@@ -476,7 +515,7 @@ header {
       input {
         float: left;
         width: 65%;
-        height: 24px;
+        height: 30px;
         box-sizing: border-box;
         padding: 2px 5px;
         margin: 0;
